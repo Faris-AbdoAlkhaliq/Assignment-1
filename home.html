@@ -2,17 +2,22 @@
 <html lang="en">
     <head>
         <style>
-    body {
-        background: #e8f0ff;  
-        color: #003366;
-        font-family: Arial;
-    }
-</style>
+            section:hover {
+                border: 3px solid #474747;
+                box-shadow: 4px 4px 10px #5e5e5e;
+            }
+            body {
+                background: #e8f0ff;  
+                color: #003366;
+                font-family: Arial;
+            }
+        </style>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>EyeTune - Home</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/R.png">
     </head>
     <body>
 
@@ -23,6 +28,8 @@
                 <a href="about-us.html">About Us</a>
                 <a href="log-in.html">Login</a>
                 <a href="sign-up.html">Signup</a>
+                <!-- Internal link to scroll to the table -->
+                <a href="#tipsTable">See Usage Tips</a>
                 <button onclick="darkModeToggle()"> Dark Mode </button>
             </nav>
         </header>
@@ -33,21 +40,52 @@
                     style="  mask-image: linear-gradient(to left, black 90%, transparent 100%);
                 -webkit-mask-image: linear-gradient(to left, black 90%, transparent 100%);">Welcome
                     to EyeTune</h1>
-                <p>Your smart assistant to reduce eye strain and improve screen
+                <p style="font-size: 19px">Your smart assistant to reduce eye strain and improve screen
                     habits.</p>
             </div>
 
             <div>
                 <!-- Placeholder image for mapping -->
                 <img src="images/eyetune2.jpeg" alt="EyeTune Project"
-                    weight="300" height="300" class="photo">
+                    weight="300" height="300" class="photo"
+                    usemap="#projectMap">
+                <!--Image Mapping-->
+                <map name="projectMap">
+                    <area shape="rect" coords="0,0,300,300"
+                        href="about-us.html">
+                </map>
             </div>
         </section>
-        <!-- Dynamic Text Section -->
-        <section class="box">
-            <p id="dynamicText" style="font-size:18px; font-weight:bold;"></p>
-            <button onclick="changeMessage()">Change Message</button>
+        <section class="box" id="howItWorks">
+            <h2>How EyeTune Works</h2>
+            <p>EyeTune analyzes your screen behavior and provides real-time
+                suggestions to reduce eye strain.
+                It combines smart checking, user inputs, and AI-like logic to
+                improve your comfort.</p>
+
+            <ol>
+                <li>Collects basic screen usage habits</li>
+                <li>Checks eye strain indicators</li>
+                <li>Suggests improvements (brightness, posture, breaks)</li>
+                <li>Tracks your daily progress</li>
+            </ol>
         </section>
+        <!-- Eye Condition Checker Section (dynamic text and picture) -->
+        <section class="box" id="conditionSection">
+            <h2>Eye Condition Check</h2>
+
+            <input type="number" id="hoursInput"
+                placeholder="Enter your daily screen hours">
+
+            <button onclick="checkEyeCondition()">Check Condition</button>
+
+            <p id="conditionText"
+                style="font-size:18px; font-weight:bold; margin-top:10px;"></p>
+
+            <img id="conditionImg" src width="300"
+                style="margin-top:15px; display:none;">
+        </section>
+
         <!-- we add here section of the benifits of using EyeTune Project-->
 
         <section id="benefits" class="box">
@@ -59,9 +97,6 @@
                 <li>Provide smart recommendations</li>
             </ul>
         </section>
-
-        <!-- Internal link to scroll to the table -->
-        <a href="#tipsTable">See Usage Tips</a>
 
         <!-- we add here section to address some tips to reduce eye strain-->
         <section id="tipsTable" class="box">

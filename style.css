@@ -24,6 +24,10 @@ ul li {
   padding: 5px;
 }
 
+ol li {
+  padding: 5px;
+} 
+
 h1 {
   margin: 20px;
 }
@@ -68,12 +72,14 @@ footer {
 #firstSection {
   margin-top: 0px;
   display: flex;
+  z-index: 2;
   align-items: center;
   justify-content: space-between;
   position: relative;
   padding: 20px;
   object-fit: cover;
 }
+
 
 .photo {
   border-radius: 10px;
