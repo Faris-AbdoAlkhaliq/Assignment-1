@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EyeTune - Signup</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EyeTune - Signup</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="home.html">Home</a>
-        <a href="about-us.html">About Us</a>
-        <a href="log-in.html">Login</a>
-        <a href="sign-up.html">Signup</a>
-    </nav>
+        <!-- Navigation -->
+        <header>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="log-in.html">Login</a>
+                <a href="sign-up.html">Signup</a>
+                <button onclick="darkModeToggle()"> Dark Mode </button>
+            </nav>
+        </header>
+        <!-- here we take all info needed for our client registration (will be modified later)-->
+        <section style="justify-content: center; text-align: center;">
+            <h1>Create Account</h1>
 
-    <!-- here we take all info needed for our client registration (will be modified later)-->
-    <h1>Create Account</h1>
+            <form id="signupForm">
+                <label>Name:</label>
+                <input type="text" id="name" required> <br> <br>
 
-    <form id="signupForm">
-        <label>Name:</label>
-        <input type="text" id="name" required> <br> <br>
+                <label>Email:</label>
+                <input type="email" id="email" required> <br> <br>
 
-        <label>Email:</label>
-        <input type="email" id="email" required> <br> <br>
+                <label>Password:</label>
+                <input type="password" id="password" required> <br> <br>
 
-        <label>Password:</label>
-        <input type="password" id="password" required> <br> <br>
+                <label>Age:</label>
+                <input type="number" id="age" required> <br> <br>
 
-        <label>Age:</label>
-        <input type="number" id="age" required> <br> <br>
+                <label>Daily Screen Time (hrs):</label>
+                <input type="number" id="screenTime" required> <br> <br>
 
-        <label>Daily Screen Time (hrs):</label>
-        <input type="number" id="screenTime" required> <br> <br>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+        <footer style="position: fixed;">
+            <p>© 2025 EyeTune Project</p>
+        </footer>
 
-        <button type="submit">Sign Up</button>
-    </form>
-
-    <footer>
-        <p>© 2025 EyeTune Project</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>

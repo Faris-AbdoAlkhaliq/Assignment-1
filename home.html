@@ -1,38 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EyeTune - Home</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <style>
+    body {
+        background: #e8f0ff;  
+        color: #003366;
+        font-family: Arial;
+    }
+</style>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="home.html">Home</a>
-        <a href="about-us.html">About Us</a>
-        <a href="log-in.html">Login</a>
-        <a href="sign-up.html">Signup</a>
-    </nav>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EyeTune - Home</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-    <header>
-        <h1>Welcome to EyeTune</h1>
-        <p>Your smart assistant to reduce eye strain and improve screen habits.</p>
-        
-        <!-- Placeholder image for mapping -->
-        <img src="images/eyetune2.jpeg" alt="EyeTune Project" usemap="#eyemap" weight="300" height="300">
+        <!-- Navigation -->
+        <header>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="log-in.html">Login</a>
+                <a href="sign-up.html">Signup</a>
+                <button onclick="darkModeToggle()"> Dark Mode </button>
+            </nav>
+        </header>
+        <!-- Welcome Section with Image Mapping -->
+        <section class="box" id="firstSection">
+            <div>
+                <h1
+                    style="  mask-image: linear-gradient(to left, black 90%, transparent 100%);
+                -webkit-mask-image: linear-gradient(to left, black 90%, transparent 100%);">Welcome
+                    to EyeTune</h1>
+                <p>Your smart assistant to reduce eye strain and improve screen
+                    habits.</p>
+            </div>
 
-        <!-- Image Mapping -->
-        <map name="eyemap">
-            <area shape="rect" coords="0,0,300,300" href="about.html" alt="About EyeTune">
-        </map>
-    </header>
+            <div>
+                <!-- Placeholder image for mapping -->
+                <img src="images/eyetune2.jpeg" alt="EyeTune Project"
+                    weight="300" height="300" class="photo">
+            </div>
+        </section>
+        <!-- Dynamic Text Section -->
+        <section class="box">
+            <p id="dynamicText" style="font-size:18px; font-weight:bold;"></p>
+            <button onclick="changeMessage()">Change Message</button>
+        </section>
+        <!-- we add here section of the benifits of using EyeTune Project-->
 
-    <footer>
-        <p>© 2025 EyeTune Project</p>
-    </footer>
+        <section id="benefits" class="box">
+            <h2>Benefits of EyeTune</h2>
+            <ul>
+                <li>Reduce eye strain</li>
+                <li>Improve screen usage habits</li>
+                <li>Detect abnormal eye conditions</li>
+                <li>Provide smart recommendations</li>
+            </ul>
+        </section>
 
-    <script src="script.js"></script>
-</body>
+        <!-- Internal link to scroll to the table -->
+        <a href="#tipsTable">See Usage Tips</a>
+
+        <!-- we add here section to address some tips to reduce eye strain-->
+        <section id="tipsTable" class="box">
+            <h2>Daily Eye Care Tips</h2>
+            <table border="1" cellpadding="8">
+                <tr>
+                    <th>Tip</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>20-20-20 Rule</td>
+                    <td>Every 20 minutes, look 20 feet away for 20 seconds.</td>
+                </tr>
+                <tr>
+                    <td>Blink Often</td>
+                    <td>Prevents eye dryness caused by long screen
+                        sessions.</td>
+                </tr>
+                <tr>
+                    <td>Correct Lighting</td>
+                    <td>Avoid harsh light and reflections behind screens.</td>
+                </tr>
+            </table>
+        </section>
+
+        <footer>
+            <p>© 2025 EyeTune Project</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>
