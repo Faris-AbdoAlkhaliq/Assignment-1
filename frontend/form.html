@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Information Form – EyeTune</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <button onclick="darkModeToggle()">Dark Mode</button>
+    </nav>
+
+    <h1>User Information Form</h1>
+    <p style="margin-left:20px;">
+        Help EyeTune personalize your screen & eye-care tips.
+        Fields marked *optional* can be left empty.
+    </p>
+
+    <form id="userInfoForm" class="box">
+
+        <!-- AGE -->
+        <label>Age (optional):</label>
+        <input type="number" id="age"
+               placeholder="Enter your age"
+               onfocus="showHint('hintAge')"
+               onblur="hideHint('hintAge')" />
+        <small id="hintAge" style="display:none;color:gray;">Your age helps us tailor eye-strain advice.</small>
+
+        <!-- SCREEN TIME HOURS -->
+        <label>Average daily screen time (hours):</label>
+        <input type="number" id="screenHours" min="0"
+               placeholder="Example: 5"
+               onfocus="showHint('hintScreen')"
+               onblur="hideHint('hintScreen')" required />
+        <small id="hintScreen" style="display:none;color:gray;">We recommend between 2–6 hours with breaks.</small>
+
+        <!-- DEVICE TYPE -->
+        <label>Devices you use (optional):</label>
+        <input type="text" id="deviceType"
+               placeholder="e.g., Laptop, Smartphone, Tablet"
+               onfocus="showHint('hintDevice')"
+               onblur="hideHint('hintDevice')" />
+        <small id="hintDevice" style="display:none;color:gray;">List devices to help adjust brightness settings.</small>
+
+        <!-- VISION STATUS -->
+        <label>Do you wear glasses? (optional):</label>
+        <select id="glasses"
+                onfocus="showHint('hintGlasses')"
+                onblur="hideHint('hintGlasses')">
+            <option value="">Select</option>
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+            <option value="sometimes">Sometimes</option>
+        </select>
+        <small id="hintGlasses" style="display:none;color:gray;">This helps us tailor strain-prevention suggestions.</small>
+
+        <!-- BREAK REMINDER -->
+        <label>Preferred break reminder interval (optional):</label>
+        <input type="text" id="breakReminder"
+               placeholder="e.g., every 20 minutes"
+               onfocus="showHint('hintBreak')"
+               onblur="hideHint('hintBreak')" />
+        <small id="hintBreak" style="display:none;color:gray;">We recommend the 20-20-20 rule.</small>
+
+        <!-- SUBMIT -->
+        <button type="submit">Submit Information</button>
+
+        <!-- MESSAGE -->
+        <p id="formMessage" style="margin-top:10px;color:green;"></p>
+    </form>
+
+    <footer>
+        <p>EyeTune © 2025 – Eye Care & Wellness</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+    // HINT SHOW/HIDE FUNCTIONS
+    function showHint(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function hideHint(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    // SIMPLE FORM SUBMISSION FEEDBACK
+    document.getElementById("userInfoForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("formMessage").innerText =
+        "Information submitted successfully!";
+    });
+    </script>
+</body>
+</html>

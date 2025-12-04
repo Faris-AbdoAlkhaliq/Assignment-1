@@ -1,0 +1,102 @@
+﻿@model eyecare.Models.UserControllerClass
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Consistent styling with your other forms */
+    .form-box {
+        border: 1px solid #ccc;
+        padding: 30px;
+        border-radius: 8px;
+        max-width: 400px; /* Smaller width for Login */
+        margin: 50px auto;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff; /* Blue for Login */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+<div class="container">
+    <div class="form-box">
+        <h2 style="text-align:center;">Login to EyeTune</h2>
+
+        <!-- 1. Success Message (e.g., "Account created!") -->
+        <!-- This comes from TempData in the Signup action -->
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div style="color: green; background-color: #d4edda; padding: 10px; border-radius: 4px; margin-bottom: 15px; text-align: center; border: 1px solid green;">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        <!-- 2. Error Message (e.g., "Invalid Password") -->
+        <!-- This comes from ViewBag in the Login action -->
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div style="color: red; background-color: #f8d7da; padding: 10px; border-radius: 4px; margin-bottom: 15px; text-align: center; border: 1px solid red;">
+                @ViewBag.ErrorMessage
+            </div>
+        }
+
+        @using (Html.BeginForm("Login", "User", FormMethod.Post))
+        {
+            <div class="form-group">
+                <label for="username">Username</label>
+                @Html.TextBoxFor(m => m.Username, new { placeholder = "Enter username", required = "required" })
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                @Html.PasswordFor(m => m.Password, new { placeholder = "Enter password", required = "required" })
+            </div>
+            <div class="form-group">
+                <label style="font-weight:normal; display:inline;">
+                    <!-- This checkbox sends 'true' to the 'RememberMe' parameter -->
+                    <input type="checkbox" name="RememberMe" value="true" /> Remember Me
+                </label>
+            </div>
+            <button type="submit">Login</button>
+
+            <p style="text-align:center; margin-top:15px;">
+                Don't have an account?
+                <!-- Link to Signup Page -->
+                @Html.ActionLink("Sign up here", "Signup", "User")
+            </p>
+        }
+    </div>
+</div>
