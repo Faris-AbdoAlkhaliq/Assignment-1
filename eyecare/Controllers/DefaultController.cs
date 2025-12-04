@@ -19,7 +19,12 @@ namespace eyecare.Controllers
         {
             return View();
         }
-
+        // 2. ABOUT US PAGE
+        public ActionResult About()
+        {
+            ViewBag.Message = "About EyeTune";
+            return View();
+        }
         // POST: Process the form
         [HttpPost]
         public ActionResult EyeCheck(EyeCheckModel formData)
