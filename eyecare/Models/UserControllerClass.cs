@@ -21,5 +21,8 @@ namespace eyecare.Models
         public string Password { get; set; }
 
         public int? Age { get; set; }
+        public int ScreenHours { get; set; }
+        public string Glasses { get; set; }
+        public string DeviceType { get; set; }
     }
 }

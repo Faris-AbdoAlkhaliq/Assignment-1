@@ -110,44 +110,50 @@ namespace eyecare.Controllers
         [HttpGet]
         public ActionResult Admin(string search)
         {
-            // Create a list to hold the users we find
             List<UserControllerClass> userList = new List<UserControllerClass>();
 
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                // Default Query: Get All Users
-                string query = "SELECT * FROM Users";
 
-                // If user typed a search term, change query to filter results
+                // UPDATED QUERY: Joins Users with EyeChecks
+                string query = @"
+            SELECT u.Id, u.Username, u.Email, u.Age, 
+                   e.ScreenHours, e.Glasses, e.DeviceType
+            FROM Users u
+            LEFT JOIN EyeChecks e ON u.Username = e.Username";
+
                 if (!string.IsNullOrEmpty(search))
                 {
-                    query += " WHERE Username LIKE @Search";
+                    query += " WHERE u.Username LIKE @Search";
                 }
 
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
 
-                // Add the search parameter if needed
                 if (!string.IsNullOrEmpty(search))
                 {
                     sqlCmd.Parameters.AddWithValue("@Search", "%" + search + "%");
                 }
 
-                // Execute and Read Data
                 SqlDataReader reader = sqlCmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    userList.Add(new UserControllerClass
+                    var user = new UserControllerClass
                     {
                         Id = Convert.ToInt32(reader["Id"]),
                         Username = reader["Username"].ToString(),
                         Email = reader["Email"].ToString(),
-                        Age = reader["Age"] == DBNull.Value ? 0 : Convert.ToInt32(reader["Age"])
-                    });
+                        Age = reader["Age"] == DBNull.Value ? 0 : Convert.ToInt32(reader["Age"]),
+
+                        // NEW: Read the joined data (Handle DBNull because user might not have done a check)
+                        ScreenHours = reader["ScreenHours"] == DBNull.Value ? 0 : Convert.ToInt32(reader["ScreenHours"]),
+                        Glasses = reader["Glasses"] == DBNull.Value ? "N/A" : reader["Glasses"].ToString(),
+                        DeviceType = reader["DeviceType"] == DBNull.Value ? "-" : reader["DeviceType"].ToString()
+                    };
+                    userList.Add(user);
                 }
             }
 
-            // Pass the list to the View
             return View(userList);
         }
         // ===========================

@@ -27,26 +27,41 @@ namespace eyecare.Controllers
         }
         // POST: Process the form
         [HttpPost]
-        public ActionResult EyeCheck(EyeCheckModel formData)
+        public ActionResult EyeCheck(eyecare.Models.EyeCheckModel formData)
         {
+            // 1. Logic to calculate the warning message (Keep your existing logic)
             string message = "Information submitted successfully!";
-
-            // Simple Logic: Check screen hours
             if (formData.ScreenHours > 6)
             {
-                message += " Warning: You are exceeding recommended screen time limits. Consider the 20-20-20 rule.";
+                message += " Warning: You are exceeding recommended screen time limits.";
             }
-
-            // Logic: Check if they wear glasses
             if (formData.Glasses == "yes")
             {
-                message += " Remember to clean your lenses to reduce strain.";
+                message += " Remember to clean your lenses.";
             }
-
-            // Send the message back to the page
             ViewBag.Message = message;
+
+            // 2. NEW LOGIC: Save to Database
+            // We need the logged-in username. If they aren't logged in, we save as "Guest"
+            string currentUser = Session["Username"] != null ? Session["Username"].ToString() : "Guest";
+
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EyeTuneDB;Integrated Security=True";
+
+            using (System.Data.SqlClient.SqlConnection sqlCon = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                string query = "INSERT INTO EyeChecks (Username, ScreenHours, DeviceType, Glasses) VALUES (@Username, @ScreenHours, @DeviceType, @Glasses)";
+                System.Data.SqlClient.SqlCommand sqlCmd = new System.Data.SqlClient.SqlCommand(query, sqlCon);
+
+                sqlCmd.Parameters.AddWithValue("@Username", currentUser);
+                sqlCmd.Parameters.AddWithValue("@ScreenHours", formData.ScreenHours);
+                sqlCmd.Parameters.AddWithValue("@DeviceType", formData.DeviceType ?? "Unknown"); // Handle nulls
+                sqlCmd.Parameters.AddWithValue("@Glasses", formData.Glasses ?? "No");
+
+                sqlCmd.ExecuteNonQuery();
+            }
 
             return View();
         }
-     }
+    }
 }
