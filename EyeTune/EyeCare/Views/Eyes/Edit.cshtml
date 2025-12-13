@@ -1,0 +1,104 @@
+﻿@model EyeCare.Models.Eyes
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Eyes</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScreenTimeHoursPerDay" class="control-label"></label>
+                <input asp-for="ScreenTimeHoursPerDay" class="form-control" />
+                <span asp-validation-for="ScreenTimeHoursPerDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GlassesType" class="control-label"></label>
+                <input asp-for="GlassesType" class="form-control" />
+                <span asp-validation-for="GlassesType" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HasEyeDisease" /> @Html.DisplayNameFor(model => model.HasEyeDisease)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="EyeDiseaseDetails" class="control-label"></label>
+                <input asp-for="EyeDiseaseDetails" class="form-control" />
+                <span asp-validation-for="EyeDiseaseDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="FamilyHistoryOfEyeDisease" /> @Html.DisplayNameFor(model => model.FamilyHistoryOfEyeDisease)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="PastEyeSurgeries" class="control-label"></label>
+                <input asp-for="PastEyeSurgeries" class="form-control" />
+                <span asp-validation-for="PastEyeSurgeries" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ExperiencesEyeStrain" /> @Html.DisplayNameFor(model => model.ExperiencesEyeStrain)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ExperiencesDryEyes" /> @Html.DisplayNameFor(model => model.ExperiencesDryEyes)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="BlurredVision" /> @Html.DisplayNameFor(model => model.BlurredVision)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Smokes" /> @Html.DisplayNameFor(model => model.Smokes)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="WearsSunglasses" /> @Html.DisplayNameFor(model => model.WearsSunglasses)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastEyeCheckupInMonths" class="control-label"></label>
+                <input asp-for="LastEyeCheckupInMonths" class="form-control" />
+                <span asp-validation-for="LastEyeCheckupInMonths" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="UsesEyeDrops" /> @Html.DisplayNameFor(model => model.UsesEyeDrops)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

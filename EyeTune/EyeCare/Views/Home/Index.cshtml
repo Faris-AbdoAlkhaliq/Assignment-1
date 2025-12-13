@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="box" id="firstSection">
+    <div>
+        <h1 style="mask-image: linear-gradient(to left, black 90%, transparent 100%); -webkit-mask-image: linear-gradient(to left, black 90%, transparent 100%);">
+            Welcome to EyeTune
+        </h1>
+        <p style="font-size: 19px">Your smart assistant to reduce eye strain and improve screen habits.</p>
+
+        <a asp-controller="Eyes" asp-action="Create" class="btn btn-primary" style="margin-top:10px;">Create My Profile</a>
+    </div>
+
+    <div>
+        <img src="~/images/eyetune2.jpeg" alt="EyeTune Project" width="300" height="300" class="photo">
+    </div>
+</section>
+
+<section class="box" id="howItWorks">
+    <h2>How EyeTune Works</h2>
+    <p>EyeTune analyzes your screen behavior and provides real-time suggestions...</p>
+    <ol>
+        <li>Collects basic screen usage habits</li>
+        <li>Checks eye strain indicators</li>
+        <li>Suggests improvements</li>
+        <li>Tracks your daily progress</li>
+    </ol>
+</section>
+
+<section class="box" id="conditionSection">
+    <h2>Quick Eye Condition Check</h2>
+    <input type="number" id="hoursInput" placeholder="Enter daily screen hours">
+    <button onclick="checkEyeCondition()">Check Condition</button>
+    <p id="conditionText" style="font-size:18px; font-weight:bold; margin-top:10px;"></p>
+    <img id="conditionImg" src="" width="300" style="margin-top:15px; display:none;">
+</section>

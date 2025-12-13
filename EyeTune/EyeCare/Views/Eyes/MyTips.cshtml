@@ -1,0 +1,73 @@
+﻿@model EyeCare.Models.Eyes
+
+@{
+    ViewData["Title"] = "My Eye Care Tips";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="card shadow-sm border-primary mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0"><i class="bi bi-person-badge"></i> Patient Profile: @Model.Id</h3>
+                </div>
+                <div class="card-body bg-light">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><strong>Age:</strong> @Model.Age</p>
+                            <p><strong>Gender:</strong> @Model.Gender</p>
+                            <p><strong>Screen Time:</strong> @Model.ScreenTimeHoursPerDay hrs/day</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><strong>Vision Correction:</strong> <span class="badge bg-info text-dark">@Model.GlassesType</span></p>
+
+                            @if (Model.EyeDiseaseDetails != "None")
+                            {
+                                <p><strong>Condition:</strong> <span class="badge bg-danger">@Model.EyeDiseaseDetails</span></p>
+                            }
+
+                            @if (Model.PastEyeSurgeries != "None")
+                            {
+                                <p><strong>History:</strong> <span class="badge bg-warning text-dark">@Model.PastEyeSurgeries</span></p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0"><i class="bi bi-clipboard-check"></i> Recommended Actions</h4>
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.TipsList != null)
+                    {
+                        <ul class="list-group list-group-flush">
+                            @foreach (string tip in ViewBag.TipsList)
+                            {
+                                <li class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1 text-success"><i class="bi bi-check-circle-fill"></i> Tip</h5>
+                                    </div>
+                                    <p class="mb-1">@tip</p>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info">
+                            No specific risks found based on current data.
+                        </div>
+                    }
+                </div>
+                <div class="card-footer text-muted text-center">
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary">Update Data</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
