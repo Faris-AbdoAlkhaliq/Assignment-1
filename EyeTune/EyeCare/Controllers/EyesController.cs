@@ -61,7 +61,14 @@ namespace EyeCare.Controllers
             {
                 _context.Add(eyes);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                // We save the Age into the session to use it later
+                HttpContext.Session.SetInt32("UserAge", eyes.Age);
+
+                // Optional: We can also save a generic "Active" flag
+                HttpContext.Session.SetString("SessionStatus", "Active");
+
+                return RedirectToAction("MyTips", new { id = eyes.Id });
             }
             return View(eyes);
         }
