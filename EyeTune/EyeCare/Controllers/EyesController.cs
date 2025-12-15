@@ -51,8 +51,6 @@ namespace EyeCare.Controllers
         }
 
         // POST: Eyes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Age,Gender,ScreenTimeHoursPerDay,GlassesType,HasEyeDisease,EyeDiseaseDetails,FamilyHistoryOfEyeDisease,PastEyeSurgeries,ExperiencesEyeStrain,ExperiencesDryEyes,BlurredVision,Smokes,WearsSunglasses,LastEyeCheckupInMonths,UsesEyeDrops")] Eyes eyes)
@@ -67,7 +65,7 @@ namespace EyeCare.Controllers
 
                 // Optional: We can also save a generic "Active" flag
                 HttpContext.Session.SetString("SessionStatus", "Active");
-
+               
                 return RedirectToAction("MyTips", new { id = eyes.Id });
             }
             return View(eyes);
@@ -90,8 +88,6 @@ namespace EyeCare.Controllers
         }
 
         // POST: Eyes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Age,Gender,ScreenTimeHoursPerDay,GlassesType,HasEyeDisease,EyeDiseaseDetails,FamilyHistoryOfEyeDisease,PastEyeSurgeries,ExperiencesEyeStrain,ExperiencesDryEyes,BlurredVision,Smokes,WearsSunglasses,LastEyeCheckupInMonths,UsesEyeDrops")] Eyes eyes)
