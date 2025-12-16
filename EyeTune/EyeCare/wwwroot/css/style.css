@@ -4,17 +4,64 @@ body {
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  background: #333;
-  padding: 10px;
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px 20px; /* Added side padding for breathing room */
 }
 
-nav a {
-  color: white;
-  margin-right: 15px;
-  text-decoration: none;
+    /* Links inside Nav */
+    nav a {
+        color: white;
+        margin-right: 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #ddd;
+        }
+
+/* --- LOGIN PARTIAL CONTAINER --- */
+/* This class will wrap your login links and push them to the right */
+.login-group {
+    margin-left: auto; /* This magic property pushes this group to the right */
+    display: flex; /* Aligns items in a row */
+    align-items: center;
 }
+
+/* --- CUSTOM BADGE FOR AGE --- */
+.age-badge {
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px; /* Rounded edges */
+    font-size: 0.9em;
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+/* --- LOGOUT BUTTON STYLE --- */
+/* Makes the button look exactly like a normal link */
+.logout-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+    .logout-btn:hover {
+        text-decoration: underline;
+        color: #ddd;
+    }    
     nav .navbar-nav {
         margin-left: auto;
         display: flex;

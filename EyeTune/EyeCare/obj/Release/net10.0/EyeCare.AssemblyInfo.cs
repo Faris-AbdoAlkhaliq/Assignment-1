@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-EyeCare-840af277-3b30-453c-84cd-45546579d77d")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("EyeCare")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+308854106004c9a5c5fc1f3d425f96b64d41efe5")]
 [assembly: System.Reflection.AssemblyProductAttribute("EyeCare")]

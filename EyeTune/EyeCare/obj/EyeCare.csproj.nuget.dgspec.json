@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\Faris-AbdoAlkhaliq\\Assignment-1\\EyeTune\\EyeCare\\EyeCare.csproj": {}
+    "C:\\Users\\Admin\\source\\repos\\Faris-AbdoAlkhaliq\\Final Assignment\\EyeTune\\EyeCare\\EyeCare.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\Faris-AbdoAlkhaliq\\Assignment-1\\EyeTune\\EyeCare\\EyeCare.csproj": {
+    "C:\\Users\\Admin\\source\\repos\\Faris-AbdoAlkhaliq\\Final Assignment\\EyeTune\\EyeCare\\EyeCare.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Faris-AbdoAlkhaliq\\Assignment-1\\EyeTune\\EyeCare\\EyeCare.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Faris-AbdoAlkhaliq\\Final Assignment\\EyeTune\\EyeCare\\EyeCare.csproj",
         "projectName": "EyeCare",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\Faris-AbdoAlkhaliq\\Assignment-1\\EyeTune\\EyeCare\\EyeCare.csproj",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\Faris-AbdoAlkhaliq\\Final Assignment\\EyeTune\\EyeCare\\EyeCare.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\Faris-AbdoAlkhaliq\\Assignment-1\\EyeTune\\EyeCare\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\Faris-AbdoAlkhaliq\\Final Assignment\\EyeTune\\EyeCare\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

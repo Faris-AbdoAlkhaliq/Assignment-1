@@ -6,7 +6,7 @@
         public int Age { get; set; }
         public string Gender { get; set; }
         public int ScreenTimeHoursPerDay { get; set; }
-        public string GlassesType { get; set; } // None, Reading, Distance, Bifocal
+        public string GlassesType { get; set; } 
 
         // Eye history
         public bool HasEyeDisease { get; set; }
