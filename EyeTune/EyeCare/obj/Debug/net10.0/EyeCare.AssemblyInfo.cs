@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EyeCare")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+308854106004c9a5c5fc1f3d425f96b64d41efe5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e4402c20278658e48d12558a77209b4b9d8d050")]
 [assembly: System.Reflection.AssemblyProductAttribute("EyeCare")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EyeCare")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

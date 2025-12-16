@@ -19,77 +19,77 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = EyeCare
 build_property.RootNamespace = EyeCare
-build_property.ProjectDir = C:\Users\Admin\source\repos\Faris-AbdoAlkhaliq\Final Assignment\EyeTune\EyeCare\
+build_property.ProjectDir = C:\Users\sword\المستندات\Assignment-1\EyeTune\EyeCare\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Admin\source\repos\Faris-AbdoAlkhaliq\Final Assignment\EyeTune\EyeCare
+build_property.MSBuildProjectDirectory = C:\Users\sword\المستندات\Assignment-1\EyeTune\EyeCare
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Eyes/Create.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Eyes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Eyes/Delete.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Eyes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Eyes/Details.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Eyes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Eyes/Edit.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Eyes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Eyes/Index.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Eyes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Eyes/MyTips.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Eyes/MyTips.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXllc1xNeVRpcHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Home/About.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Home/Index.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Home/Privacy.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Shared/Error.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/_ViewImports.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/_ViewStart.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/Faris-AbdoAlkhaliq/Final Assignment/EyeTune/EyeCare/Views/Shared/_Layout.cshtml]
+[C:/Users/sword/المستندات/Assignment-1/EyeTune/EyeCare/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6v53oyhnnc
